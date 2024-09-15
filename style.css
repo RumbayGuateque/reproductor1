@@ -1,0 +1,72 @@
+body {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.radio-player {
+    width: 250px;
+    height: 80px;
+    position: absolute;
+    top: 85px;
+    left: 50px;
+    background: linear-gradient(to right, #ffe600, #0047ab, #ce1126); /* Colores de la bandera de Colombia */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Brillo rojo escarlata */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.play-button {
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 1); /* Brillo rojo neón al pasar el ratón */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+    }
+}
+
+#playText {
+    animation: textBlink 1s infinite;
+}
+
+@keyframes textBlink {
+    0%, 100% { color: #ffffff; }
+    50% { color: #ff0000; }
+}
+
+#volumeControl {
+    width: 80px;
+    margin-left: 10px;
+}
